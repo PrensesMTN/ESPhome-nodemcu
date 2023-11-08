@@ -1,0 +1,27 @@
+esphome:
+  name: my_led_project
+  platform: ESP32
+  board: nodemcu-32s
+
+wifi:
+  ssid: "WiFi_ADI"
+  password: "WiFi_ŞİFRESİ"
+
+logger:
+
+api:
+
+ota:
+
+output:
+  - platform: gpio
+    pin: GPIO2
+    inverted: True
+    id: my_led
+
+light:
+  - platform: binary
+    name: "LED"
+    id: led
+    output: my_led
+
